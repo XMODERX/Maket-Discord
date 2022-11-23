@@ -1,0 +1,146 @@
+//meta
+*
+    margin: 0
+    padding: 0
+%df
+    display: flex
+%df_center
+    display: flex
+    justify-content: center
+    align-items: center
+
+//body
+
+body
+    @extend %df
+    background-color: #202225
+
+//defult items
+.sets-message-bar
+    @extend %df
+    justify-content: space-between
+    align-items: center
+    min-width: 224px
+    min-height: 32px
+    border-radius: 4px
+    margin: 8px 0 8px
+    background: #42464D;
+//defult discord buttons
+
+.defult-button-inner
+    @extend %df_center
+    min-width: 48px
+    min-height: 48px
+    background: #5865F2
+    border-radius: 16px
+
+.button-inner
+    @extend %df_center
+    min-width: 48px
+    min-height: 48px
+    background: #dcd3fb
+    border-radius: 50%
+
+.button-gray
+    @extend %df_center
+    min-width: 48px
+    min-height: 48px
+    background: #36393F
+    border-radius: 50%
+
+//gray lines
+.gray-line
+    @extend %df
+    background: #373A3F
+    margin: 0 auto
+    width: 32px
+    min-height: 2px
+
+//white lines
+.min-white-left-line
+    @extend %df
+    width: 4px
+    height: 8px
+    background: #FFFFFF
+    border-radius: 0px 4px 4px 0px
+    left: 0
+    position: absolute
+
+//left navigation
+.left-navbar
+    margin-top: 24px
+    nav
+        @extend %df
+        flex-direction: row
+        max-width: 72px
+        min-height: 1015px
+        ul
+            list-style-type: none
+            #defult-discord-button
+                @extend %df_center
+            li
+                @extend %df_center
+                min-width: 72px
+                min-height: 72px
+                color: #FFFFFF
+            .gray-line
+                @extend %df
+                background: #373A3F
+                margin: 0 auto
+                width: 32px
+                min-height: 2px
+
+//lef message bar
+
+.left-message-bar
+    justify-content: center
+    margin-top: 24px
+    min-width: 240px
+    min-height: 48px
+    background: #2F3136
+    .input-plase
+        @extend %df_center
+        border-bottom: 1px solid #232428
+        input
+            min-width: 224px
+            min-height: 32px
+            margin: 8px 0 8px 
+            background-color: #202225
+            color: #96989D
+            font-size: 12px
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 600
+            text-align: center
+            border-radius: 4px
+            border: none
+    .friend-button
+        @extend %df
+        margin: 8px 8px 
+        max-width: 224px
+        max-height: 32px
+        .icon
+            width: 18px
+            height: 18px
+            margin-left: 15px
+        .tittle
+            color: #FFFFFF
+            font-size: 12px
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 600
+            width: 164px
+            margin-right: 12px
+
+//hover
+
+#defult-discord-button:hover
+    .min-white-left-line
+        @extend %df
+        width: 4px
+        height: 42px
+        background: #FFFFFF
+        border-radius: 0px 4px 4px 0px
+        left: 0
+        position: absolute
+        transition: 0.7s
