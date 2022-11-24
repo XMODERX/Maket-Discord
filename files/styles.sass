@@ -8,6 +8,21 @@
     display: flex
     justify-content: center
     align-items: center
+%style_for_tittle
+    color: #96989D
+    font-size: 16px
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 600
+    width: 164px
+    margin-right: 12px
+%style_for_static_tittle
+    color: #96989D
+    font-size: 13px
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 600
+    width: 164px
 
 //body
 
@@ -24,7 +39,7 @@ body
     min-height: 32px
     border-radius: 4px
     margin: 8px 0 8px
-    background: #42464D;
+
 //defult discord buttons
 
 .defult-button-inner
@@ -49,6 +64,7 @@ body
     border-radius: 50%
 
 //gray lines
+
 .gray-line
     @extend %df
     background: #373A3F
@@ -57,6 +73,7 @@ body
     min-height: 2px
 
 //white lines
+
 .min-white-left-line
     @extend %df
     width: 4px
@@ -73,7 +90,7 @@ body
         @extend %df
         flex-direction: row
         max-width: 72px
-        min-height: 1015px
+        min-height: 1037px
         ul
             list-style-type: none
             #defult-discord-button
@@ -93,7 +110,6 @@ body
 //lef message bar
 
 .left-message-bar
-    justify-content: center
     margin-top: 24px
     min-width: 240px
     min-height: 48px
@@ -104,7 +120,7 @@ body
         input
             min-width: 224px
             min-height: 32px
-            margin: 8px 0 8px 
+            margin: 8px 0 8px
             background-color: #202225
             color: #96989D
             font-size: 12px
@@ -114,23 +130,67 @@ body
             text-align: center
             border-radius: 4px
             border: none
-    .friend-button
+    .messageBar-buttons
+        .messageBar-button
+            @extend %df
+            margin: 8px 8px
+            max-width: 224px
+            max-height: 32px
+            .icon
+                width: 18px
+                height: 18px
+                margin-left: 15px
+            .messageBar-tittle
+                @extend %style_for_tittle
+        .button
+            margin: 8px 8px 0 20px
+            .other-icon
+                width: 12px
+                height: 12px
+                margin-right: 26px
+            .static-tittle
+                @extend %style_for_static_tittle
+    .message-list
+        min-height: 680px
+        ul
+            min-height: 100%
+            li
+                @extend %df_center
+                justify-content: space-between
+                margin: 8px 8px
+                min-width: 224px
+                min-height: 40px
+                margin-bottom: 8px
+                .avatar
+                    width: 24px
+                    height: 24px
+                    background: #36393F
+                    border-radius: 24px
+                    margin-left: 12px
+                .human-tittle
+                    width: 164px
+                    height: 16px
+                    border-radius: 24px
+                    background: #36393F
+                    margin-right: 12px
+    .min-profile-bar
         @extend %df
-        margin: 8px 8px 
-        max-width: 224px
-        max-height: 32px
-        .icon
-            width: 18px
-            height: 18px
-            margin-left: 15px
-        .tittle
-            color: #FFFFFF
-            font-size: 12px
-            font-family: 'Inter'
-            font-style: normal
-            font-weight: 600
-            width: 164px
-            margin-right: 12px
+        justify-content: space-between
+        align-items: center
+        margin-top: 52px
+        width: 100%
+        height: 48px
+        background: #292B2F
+        .profileBar-avatar
+            @extend %df_center
+            width: 32px
+            height: 32px
+            border-radius: 32px
+            background: #757E8A
+            img:nth-of-type(2)
+                position: absolute
+                left: 100px
+                top: 1037px
 
 //hover
 
@@ -144,3 +204,9 @@ body
         left: 0
         position: absolute
         transition: 0.7s
+
+.messageBar-button:hover
+    background: #42464D
+    transition: 0.3s
+    .messageBar-tittle
+        color: #FFFFFF
