@@ -23,12 +23,29 @@
     font-style: normal
     font-weight: 600
     width: 164px
+%style_for_profileBar-name
+    color: #FFFFFF
+    font-size: 12px
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 600
+%style_for_profileBar-id
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 400
+    font-size: 11px
+    line-height: 12px
+    color: #96989D
 
 //body
 
 body
     @extend %df
     background-color: #202225
+
+.main-container
+    min-height: 100vh
+    display: flex
 
 //defult items
 .sets-message-bar
@@ -72,6 +89,12 @@ body
     width: 32px
     min-height: 2px
 
+.right-gray-line
+    display: flex
+    align-self: center
+    height: 24px
+    width: 1px
+    background: #42464D
 //white lines
 
 .min-white-left-line
@@ -86,11 +109,11 @@ body
 //left navigation
 .left-navbar
     margin-top: 24px
+    max-height: 100vh
     nav
         @extend %df
         flex-direction: row
         max-width: 72px
-        min-height: 1037px
         ul
             list-style-type: none
             #defult-discord-button
@@ -104,15 +127,15 @@ body
                 @extend %df
                 background: #373A3F
                 margin: 0 auto
-                width: 32px
+                min-width: 32px
                 min-height: 2px
 
-//lef message bar
+//left message bar
 
 .left-message-bar
     margin-top: 24px
-    min-width: 240px
-    min-height: 48px
+    max-width: 240px
+    max-height: 750px
     background: #2F3136
     .input-plase
         @extend %df_center
@@ -130,6 +153,7 @@ body
             text-align: center
             border-radius: 4px
             border: none
+            outline: none
     .messageBar-buttons
         .messageBar-button
             @extend %df
@@ -137,39 +161,38 @@ body
             max-width: 224px
             max-height: 32px
             .icon
-                width: 18px
-                height: 18px
+                min-width: 18px
+                min-height: 18px
                 margin-left: 15px
             .messageBar-tittle
                 @extend %style_for_tittle
         .button
             margin: 8px 8px 0 20px
             .other-icon
-                width: 12px
-                height: 12px
+                min-width: 12px
+                min-height: 12px
                 margin-right: 26px
             .static-tittle
                 @extend %style_for_static_tittle
     .message-list
-        min-height: 680px
+        max-height: 100vh
         ul
-            min-height: 100%
+            max-height: 100%
             li
                 @extend %df_center
                 justify-content: space-between
                 margin: 8px 8px
-                min-width: 224px
-                min-height: 40px
-                margin-bottom: 8px
+                max-width: 224px
+                min-height: 35px
                 .avatar
-                    width: 24px
-                    height: 24px
+                    min-width: 24px
+                    min-height: 24px
                     background: #36393F
                     border-radius: 24px
                     margin-left: 12px
                 .human-tittle
-                    width: 164px
-                    height: 16px
+                    min-width: 164px
+                    min-height: 16px
                     border-radius: 24px
                     background: #36393F
                     margin-right: 12px
@@ -177,20 +200,222 @@ body
         @extend %df
         justify-content: space-between
         align-items: center
-        margin-top: 52px
-        width: 100%
-        height: 48px
+        margin-top: 170px
+        min-height: 40px
         background: #292B2F
-        .profileBar-avatar
-            @extend %df_center
-            width: 32px
-            height: 32px
-            border-radius: 32px
-            background: #757E8A
-            img:nth-of-type(2)
+        .profileBar-logo-id
+            @extend %df
+            justify-content: space-between
+            margin-left: 8px
+            .avatar
+                @extend %df_center
+                margin: 0 4px
+            .user-tittle
+                max-width: 104px
+                min-height: 32px
+                .profileBar-tittle
+                    .username
+                        p
+                            @extend %style_for_profileBar-name
+                            padding-left: 4px
+                            padding-top: 4px
+                    .user-id
+                        p
+                            @extend %style_for_profileBar-id
+                            padding-left: 4px
+            .avatar-plase
+                @extend %df_center
+                min-width: 32px
+                min-height: 32px
+                border-radius: 32px
+                background: #757E8A
+            .online-dot
                 position: absolute
-                left: 100px
-                top: 1037px
+                left: 105px
+                top: 773px
+    .profileBar-settings
+        min-width: 80px
+        margin-right: 8px
+        .profileBar-setting-icons
+            @extend %df
+            justify-content: space-between
+
+//main section
+.add-friend
+    background: #36393F
+    margin-top: 24px
+    .add-friend-upper
+        min-height: 48px
+        display: flex
+        background: #36393F
+        border-bottom: 1px solid #232428
+        .upper-menu-tittle
+            @extend %df_center
+            justify-content: space-evenly
+            min-height: 48px
+            width: 157px
+            p
+                min-height: 24px
+                max-width: 57px
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 500
+                font-size: 16px
+                line-height: 24px
+                color: #FFFFFF
+        .upper-menu-buttons
+            @extend %df
+            align-items: center
+            justify-content: space-evenly
+            ul
+                min-width: 330px
+                justify-content: space-evenly
+                @extend %df
+                list-style-type: none
+                li
+                    font-family: 'Inter'
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 24px
+                    color: #96989D
+                #green-add-friend
+                    color: #3BA55D
+        .upper-menu-icons
+            width: 90px
+            margin-left: 640px
+            @extend %df
+            align-items: center
+            justify-content: space-evenly
+            img
+                height: 18px
+                width: 18px
+
+    .main-sec
+        display: flex
+        flex-direction: row
+        max-height: 750px
+        min-width: 100%
+        .left
+            display: flex
+            flex-direction: column
+            background: #36393F
+            max-height: 100vh
+            min-width: 870px
+            .add-friend-bottom
+                max-height: 150px
+                margin: 16px 32px
+                .add-friend-bottom-tittle
+                    @extend %df
+                    flex-direction: column
+                    justify-content: space-between
+                    max-width: 100vh
+                    min-height: 156px
+                    div
+                        display: flex
+                        justify-content: space-evenly
+                        flex-direction: column
+                        margin: 0 17px
+                        max-width: 100vh
+                        min-height: 84px
+                        h6
+                            min-height: 24px
+                            max-width: 100vh
+                            font-family: 'Inter'
+                            font-style: normal
+                            font-weight: 700
+                            font-size: 16px
+                            line-height: 24px
+                            color: #FFFFFF
+                        p
+                            min-height: 24px
+                            max-width: 100vh
+                            font-family: 'Inter'
+                            font-style: normal
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 24px
+                            color: #96989D
+                    .input-plase
+                        @extend %df
+                        justify-content: space-between
+                        align-items: center
+                        flex-direction: row
+                        height: 56px
+                        background: #202225
+                        border-radius: 8px
+                        min-height: 56px
+                        input
+                            min-height: 24px
+                            max-width: 982px
+                            margin-left: 17px
+                            background: #202225
+                            border: none
+                            outline: none
+                            @extend %style_for_static_tittle
+                        .input-button
+                            @extend %df_center
+                            min-height: 32px
+                            width: 173px
+                            background: #3C438B
+                            border-radius: 4px
+                            p
+                                min-height: 16px
+                                max-width: 141px
+                                @extend %style_for_static_tittle
+        .right
+            max-height: 523px
+            max-width: 359px
+            background: #36393F
+        .wampus-plase
+            display: flex
+            align-items: center
+            justify-content: center
+            max-height: 750px
+            border-top: 1px solid #42464D
+            .wampus
+                margin-top: 100px
+                display: flex
+                align-items: center
+                justify-content: center
+                min-height: 100%
+                width: 100%
+        .right
+            min-height: 680px
+            min-width: 353px
+            background-color: #36393F
+            border-left: 1px solid #42464D
+            .right-tittle
+                p
+                    padding: 16px
+                    min-height: 24px
+                    max-width: 327px
+                    font-family: 'Inter'
+                    font-style: normal
+                    font-weight: 700
+                    font-size: 20px
+                    line-height: 24px
+                    color: #FFFFFF
+            .right-info
+                .right-info-tittle
+                    text-align: center
+                    font-family: 'Inter'
+                    font-style: normal
+                    font-weight: 700
+                    font-size: 14px
+                    line-height: 24px
+                    color: #FFFFFF
+                .min-info
+                    margin-top: 10px
+                    width: 327px
+                    height: 32px
+                    text-align: center
+                    font-family: 'Inter'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 11px
+                    line-height: 16px
+                    color: #96989D
 
 //hover
 
@@ -209,4 +434,5 @@ body
     background: #42464D
     transition: 0.3s
     .messageBar-tittle
-        color: #FFFFFF
+        p
+            color: #FFFFFF
