@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-body, .sets-message-bar, .gray-line, .min-white-left-line, .left-navbar nav, .left-navbar nav ul .gray-line, .left-message-bar .messageBar-buttons .messageBar-button, .left-message-bar .min-profile-bar, .left-message-bar .min-profile-bar .profileBar-logo-id, .left-message-bar .profileBar-settings .profileBar-setting-icons, .add-friend .add-friend-upper .upper-menu-buttons, .add-friend .add-friend-upper .upper-menu-buttons ul, .add-friend .add-friend-upper .upper-menu-icons, .add-friend .main-sec .left .add-friend-bottom .add-friend-bottom-tittle, .add-friend .main-sec .left .add-friend-bottom .add-friend-bottom-tittle .input-plase, #defult-discord-button:hover .min-white-left-line {
+body, .sets-message-bar, .gray-line, .min-white-left-line, .middle-white-left-line, .large-white-left-line, .left-navbar nav, .left-navbar nav ul .gray-line, .left-message-bar .messageBar-buttons .messageBar-button, .left-message-bar .min-profile-bar, .left-message-bar .min-profile-bar .profileBar-logo-id, .left-message-bar .profileBar-settings .profileBar-setting-icons, .add-friend .add-friend-upper .upper-menu-buttons, .add-friend .add-friend-upper .upper-menu-buttons ul, .add-friend .add-friend-upper .upper-menu-icons, .add-friend .main-sec .left .add-friend-bottom .add-friend-bottom-tittle, .add-friend .main-sec .left .add-friend-bottom .add-friend-bottom-tittle .input-plase {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +127,30 @@ body {
   border-radius: 0px 4px 4px 0px;
   left: 0;
   position: absolute;
+  -webkit-transition: 0.7;
+  transition: 0.7;
+}
+
+.middle-white-left-line {
+  width: 4px;
+  height: 15px;
+  background: #FFFFFF;
+  border-radius: 0px 4px 4px 0px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.large-white-left-line {
+  width: 4px;
+  height: 42px;
+  background: #FFFFFF;
+  border-radius: 0px 4px 4px 0px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .left-navbar {
@@ -576,17 +600,16 @@ body {
   color: #96989D;
 }
 
-#defult-discord-button:hover .min-white-left-line {
-  width: 4px;
-  height: 42px;
-  background: #FFFFFF;
-  border-radius: 0px 4px 4px 0px;
-  left: 0;
-  position: absolute;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
+/* #defult-discord-button:hover
+ .min-white-left-line
+ @extend %df
+ width: 4px
+ height: 42px
+ background: #FFFFFF
+ border-radius: 0px 4px 4px 0px
+ left: 0
+ position: absolute
+ transition: 0.7s */
 .messageBar-button:hover {
   background: #42464D;
   -webkit-transition: 0.3s;

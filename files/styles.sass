@@ -105,6 +105,27 @@ body
     border-radius: 0px 4px 4px 0px
     left: 0
     position: absolute
+    transition: 0.7
+
+.middle-white-left-line
+    @extend %df
+    width: 4px
+    height: 15px
+    background: #FFFFFF
+    border-radius: 0px 4px 4px 0px
+    left: 0
+    position: absolute
+    transition: 0.7s
+
+.large-white-left-line
+    @extend %df
+    width: 4px
+    height: 42px
+    background: #FFFFFF
+    border-radius: 0px 4px 4px 0px
+    left: 0
+    position: absolute
+    transition: 0.7s
 
 //left navigation
 .left-navbar
@@ -419,16 +440,16 @@ body
 
 //hover
 
-#defult-discord-button:hover
-    .min-white-left-line
-        @extend %df
-        width: 4px
-        height: 42px
-        background: #FFFFFF
-        border-radius: 0px 4px 4px 0px
-        left: 0
-        position: absolute
-        transition: 0.7s
+/* #defult-discord-button:hover
+ .min-white-left-line
+ @extend %df
+ width: 4px
+ height: 42px
+ background: #FFFFFF
+ border-radius: 0px 4px 4px 0px
+ left: 0
+ position: absolute
+ transition: 0.7s
 
 .messageBar-button:hover
     background: #42464D
