@@ -45,6 +45,7 @@ body
 
 .main-container
     min-height: 100vh
+    min-width: 100%
     display: flex
 
 //defult items
@@ -154,118 +155,137 @@ body
 //left message bar
 
 .left-message-bar
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
     margin-top: 24px
     max-width: 240px
-    max-height: 750px
+    max-height: 100vh
     background: #2F3136
-    .input-plase
-        @extend %df_center
-        border-bottom: 1px solid #232428
-        input
-            min-width: 224px
-            min-height: 32px
-            margin: 8px 0 8px
-            background-color: #202225
-            color: #96989D
-            font-size: 12px
-            font-family: 'Inter'
-            font-style: normal
-            font-weight: 600
-            text-align: center
-            border-radius: 4px
-            border: none
-            outline: none
-    .messageBar-buttons
-        .messageBar-button
-            @extend %df
-            margin: 8px 8px
-            max-width: 224px
-            max-height: 32px
-            .icon
-                min-width: 18px
-                min-height: 18px
-                margin-left: 15px
-            .messageBar-tittle
-                @extend %style_for_tittle
-        .button
-            margin: 8px 8px 0 20px
-            .other-icon
-                min-width: 12px
-                min-height: 12px
-                margin-right: 26px
-            .static-tittle
-                @extend %style_for_static_tittle
-    .message-list
-        max-height: 100vh
-        ul
-            max-height: 100%
-            li
-                @extend %df_center
-                justify-content: space-between
+    .left-messageBar-inner
+        background: #2F3136
+        max-width: 240px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        background: #2F3136
+        .input-plase
+            @extend %df_center
+            border-bottom: 1px solid #232428
+            input
+                min-width: 224px
+                min-height: 32px
+                margin: 8px 0 8px
+                background-color: #202225
+                color: #96989D
+                font-size: 12px
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 600
+                text-align: center
+                border-radius: 4px
+                border: none
+                outline: none
+        .messageBar-buttons
+            .messageBar-button
+                @extend %df
                 margin: 8px 8px
                 max-width: 224px
-                min-height: 35px
+                max-height: 32px
+                .icon
+                    min-width: 18px
+                    min-height: 18px
+                    margin-left: 15px
+                .messageBar-tittle
+                    @extend %style_for_tittle
+            .button
+                margin: 8px 8px 0 20px
+                .other-icon
+                    min-width: 12px
+                    min-height: 12px
+                    margin-right: 26px
+                .static-tittle
+                    @extend %style_for_static_tittle
+        .message-list
+            max-width: 240px
+            height: 100%
+            ul
+                max-height: 100%
+                li
+                    @extend %df_center
+                    justify-content: space-between
+                    margin: 8px 8px
+                    max-width: 224px
+                    min-height: 35px
+                    .avatar
+                        min-width: 24px
+                        min-height: 24px
+                        background: #36393F
+                        border-radius: 24px
+                        margin-left: 12px
+                    .human-tittle
+                        min-width: 164px
+                        min-height: 16px
+                        border-radius: 24px
+                        background: #36393F
+                        margin-right: 12px
+        .min-profile-bar
+            @extend %df
+            justify-content: space-between
+            align-items: center
+            align-self: end
+            width: 100%
+            min-height: 40px
+            background: #292B2F
+            .profileBar-logo-id
+                position: relative
+                @extend %df
+                justify-content: space-between
+                margin-left: 8px
                 .avatar
-                    min-width: 24px
-                    min-height: 24px
-                    background: #36393F
-                    border-radius: 24px
-                    margin-left: 12px
-                .human-tittle
-                    min-width: 164px
-                    min-height: 16px
-                    border-radius: 24px
-                    background: #36393F
-                    margin-right: 12px
-    .min-profile-bar
-        @extend %df
-        justify-content: space-between
-        align-items: center
-        margin-top: 170px
-        min-height: 40px
-        background: #292B2F
-        .profileBar-logo-id
-            @extend %df
-            justify-content: space-between
-            margin-left: 8px
-            .avatar
-                @extend %df_center
-                margin: 0 4px
-            .user-tittle
-                max-width: 104px
-                min-height: 32px
-                .profileBar-tittle
-                    .username
-                        p
-                            @extend %style_for_profileBar-name
-                            padding-left: 4px
-                            padding-top: 4px
-                    .user-id
-                        p
-                            @extend %style_for_profileBar-id
-                            padding-left: 4px
-            .avatar-plase
-                @extend %df_center
-                min-width: 32px
-                min-height: 32px
-                border-radius: 32px
-                background: #757E8A
-            .online-dot
-                position: absolute
-                left: 105px
-                top: 773px
-    .profileBar-settings
-        min-width: 80px
-        margin-right: 8px
-        .profileBar-setting-icons
-            @extend %df
-            justify-content: space-between
+                    @extend %df_center
+                    margin: 0 4px
+                .user-tittle
+                    max-width: 104px
+                    min-height: 32px
+                    .profileBar-tittle
+                        .username
+                            p
+                                @extend %style_for_profileBar-name
+                                padding-left: 4px
+                                padding-top: 4px
+                        .user-id
+                            p
+                                @extend %style_for_profileBar-id
+                                padding-left: 4px
+                .avatar-plase
+                    @extend %df_center
+                    min-width: 32px
+                    min-height: 32px
+                    border-radius: 32px
+                    background: #757E8A
+                .online-dot
+                    position: absolute
+                    left: 26px
+                    top: 17px
+        .profileBar-settings
+            min-width: 80px
+            margin-right: 8px
+            .profileBar-setting-icons
+                @extend %df
+                justify-content: space-between
 
 //main section
 .add-friend
+    display: flex
+    flex-direction: column
+    width: 100%
     background: #36393F
     margin-top: 24px
     .add-friend-upper
+        max-width: 100vw
         min-height: 48px
         display: flex
         background: #36393F
@@ -303,11 +323,14 @@ body
                 #green-add-friend
                     color: #3BA55D
         .upper-menu-icons
-            width: 90px
-            margin-left: 640px
             @extend %df
             align-items: center
-            justify-content: space-evenly
+            margin-left: 440px
+            .upper-menu-icons-inner
+                width: 100px
+                @extend %df
+                align-items: center
+                justify-content: space-evenly
             img
                 height: 18px
                 width: 18px
@@ -315,33 +338,36 @@ body
     .main-sec
         display: flex
         flex-direction: row
+        justify-content: space-between
         max-height: 750px
-        min-width: 100%
+        width: 100%
         .left
             display: flex
             flex-direction: column
+            justify-content: space-between
             background: #36393F
+            width: 100%
             max-height: 100vh
-            min-width: 870px
             .add-friend-bottom
+                max-width: 100%
                 max-height: 150px
                 margin: 16px 32px
                 .add-friend-bottom-tittle
                     @extend %df
                     flex-direction: column
                     justify-content: space-between
-                    max-width: 100vh
+                    max-width: 100vw
                     min-height: 156px
                     div
                         display: flex
                         justify-content: space-evenly
                         flex-direction: column
                         margin: 0 17px
-                        max-width: 100vh
+                        max-width: 100vw
                         min-height: 84px
                         h6
                             min-height: 24px
-                            max-width: 100vh
+                            max-width: 100vw
                             font-family: 'Inter'
                             font-style: normal
                             font-weight: 700
@@ -350,7 +376,7 @@ body
                             color: #FFFFFF
                         p
                             min-height: 24px
-                            max-width: 100vh
+                            max-width: 100vw
                             font-family: 'Inter'
                             font-style: normal
                             font-weight: 400
@@ -365,6 +391,7 @@ body
                         height: 56px
                         background: #202225
                         border-radius: 8px
+                        max-width: 100%
                         min-height: 56px
                         input
                             min-height: 24px
@@ -393,17 +420,15 @@ body
             align-items: center
             justify-content: center
             max-height: 750px
-            border-top: 1px solid #42464D
+            max-width: 100vw
             .wampus
-                margin-top: 100px
                 display: flex
                 align-items: center
                 justify-content: center
-                min-height: 100%
-                width: 100%
+                max-width: 100vw
         .right
-            min-height: 680px
-            min-width: 353px
+            height: 680px
+            max-width: 353px
             background-color: #36393F
             border-left: 1px solid #42464D
             .right-tittle
