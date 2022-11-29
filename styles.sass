@@ -130,7 +130,6 @@ body
 
 //left navigation
 .left-navbar
-    margin-top: 24px
     max-height: 100vh
     nav
         @extend %df
@@ -159,10 +158,9 @@ body
     flex-direction: column
     justify-content: space-between
     align-items: center
-    margin-top: 24px
     max-width: 240px
-    max-height: 100vh
     background: #2F3136
+    height: 100%
     .left-messageBar-inner
         background: #2F3136
         max-width: 240px
@@ -173,10 +171,12 @@ body
         background: #2F3136
         .input-plase
             @extend %df_center
+            width: 240px
+            height: 48px
             border-bottom: 1px solid #232428
             input
-                min-width: 224px
-                min-height: 32px
+                min-width: 200px
+                max-height: 32px
                 margin: 8px 0 8px
                 background-color: #202225
                 color: #96989D
@@ -184,7 +184,7 @@ body
                 font-family: 'Inter'
                 font-style: normal
                 font-weight: 600
-                text-align: center
+                padding: 8px
                 border-radius: 4px
                 border: none
                 outline: none
@@ -235,9 +235,8 @@ body
             @extend %df
             justify-content: space-between
             align-items: center
-            align-self: end
             width: 100%
-            min-height: 40px
+            min-height: 52px
             background: #292B2F
             .profileBar-logo-id
                 position: relative
@@ -283,13 +282,16 @@ body
     flex-direction: column
     width: 100%
     background: #36393F
-    margin-top: 24px
     .add-friend-upper
         max-width: 100vw
         min-height: 48px
         display: flex
         background: #36393F
         border-bottom: 1px solid #232428
+        .upper-menu-childs
+            display: flex
+            justify-content: space-between
+            width: 100%
         .upper-menu-tittle
             @extend %df_center
             justify-content: space-evenly
@@ -325,7 +327,6 @@ body
         .upper-menu-icons
             @extend %df
             align-items: center
-            margin-left: 440px
             .upper-menu-icons-inner
                 width: 100px
                 @extend %df
@@ -339,7 +340,7 @@ body
         display: flex
         flex-direction: row
         justify-content: space-between
-        max-height: 750px
+        height: 100%
         width: 100%
         .left
             display: flex
@@ -411,15 +412,11 @@ body
                                 min-height: 16px
                                 max-width: 141px
                                 @extend %style_for_static_tittle
-        .right
-            max-height: 523px
-            max-width: 359px
-            background: #36393F
         .wampus-plase
             display: flex
             align-items: center
             justify-content: center
-            max-height: 750px
+            height: 750px
             max-width: 100vw
             .wampus
                 display: flex
@@ -427,7 +424,7 @@ body
                 justify-content: center
                 max-width: 100vw
         .right
-            height: 680px
+            height: 100%
             max-width: 353px
             background-color: #36393F
             border-left: 1px solid #42464D
